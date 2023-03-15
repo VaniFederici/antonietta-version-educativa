@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* estilos generales*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+body {
+  background-color: black;
+  color: bisque;
+  font-family: "Open Sans", sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-nav {
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+nav ul {
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+
+  margin: 0px 10px;
+}
+
+ul li a {
+  color: #ff9d10;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+footer {
+  padding: 50px;
+  border-top: #403e3e;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* index*/
+.principal img {
+  width: 100%;
+}
+.video-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+iframe {
+  width: 640px;
+  height: 400px;
+}
+
+.article_container article {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+.article_container p {
+  padding: 10px 50px;
+}
+/*galeria*/
+
+.main-galeria img {
+  width: 350px;
+  height: 350px;
+}
+
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 60px;
+  justify-items: center;
+  margin-top: 20px;
+}
+/* biografia*/
+.bio-info {
+  margin: 15px 20px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/*eventos*/
+.eventos.video-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 20px;
+}
+
+/*contacto*/
+fieldset {
+  padding: 30px;
+  width: 40%;
+  margin-bottom: 100px;
+}
+
+/*MEDIA QUERIES*/
+
+/*mobile*/
+@media only screen and (max-width: 576px) {
+  /*estilos generales*/
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header img {
+    width: 90%;
+  }
+  .menu-nav {
+    padding: 10px 0px;
+  }
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  iframe {
+    width: 500px;
+    height: 280px;
+  }
+  .article_info-a {
+    flex-direction: column;
+    text-align: justify;
+  }
+  .article_info-b {
+    flex-direction: column-reverse;
+    text-align: justify;
+  }
+
+  /* galeria*/
+  .galeria-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
