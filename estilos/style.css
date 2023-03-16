@@ -14,34 +14,12 @@ body {
   color: bisque;
   font-family: "Open Sans", sans-serif;
 }
-/* header {
-  position: sticky;
-  top: 0;
+
+header {
   background-color: black;
-  display: flex;
-  justify-content: space-between;
+  position: sticky;
+  top: 0px;
 }
-.menu-nav {
-  padding: 20px;
-  display: flex;
-  align-items: flex-end;
-}
-nav ul {
-  display: flex;
-}
-
-ul li {
-  list-style: none;
-
-  margin: 0px 10px;
-}
-
-ul li a {
-  color: #ff9d10;
-  font-size: 1.4rem;
-  text-decoration: none;
-} */
-
 .nav-link {
   color: #ff9d10;
   font-size: 1.3rem;
@@ -95,18 +73,10 @@ iframe {
 /*galeria*/
 
 .main-galeria img {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
 }
 
-.galeria-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-row-gap: 60px;
-  justify-items: center;
-  margin-top: 20px;
-}
 /* biografia*/
 .bio-info {
   margin: 15px 20px;
@@ -124,12 +94,23 @@ iframe {
 }
 
 /*contacto*/
-fieldset {
-  padding: 30px;
-  width: 40%;
-  margin-bottom: 100px;
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+form {
+  width: 50%;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 5px;
 }
 
+.btn {
+  background-color: #ff9d10;
+}
+.card-text {
+  color: black;
+}
 /*MEDIA QUERIES*/
 
 /*mobile*/
@@ -149,6 +130,15 @@ fieldset {
   }
   .article_info-b {
     flex-direction: column-reverse;
+    text-align: justify;
+  }
+  /*biografia*/
+  .bio-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bio-info p {
+    padding: 20px;
     text-align: justify;
   }
 
