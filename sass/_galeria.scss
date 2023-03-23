@@ -1,0 +1,9 @@
+/*aplico mixin*/
+@mixin tamaños($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.main-galeria img {
+  @include tamaños(400px, 400px);
+}

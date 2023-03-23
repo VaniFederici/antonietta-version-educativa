@@ -1,0 +1,25 @@
+/*map para formu*/
+$estiloFormu: (
+  ancho: 50%,
+  borde: 1px solid white,
+  relleno: 20px,
+  borde-redondeado: 5px,
+);
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+form {
+  width: map-get($estiloFormu, $ancho);
+  border: map-get($estiloFormu, $borde);
+  padding: map-get($estiloFormu, $relleno);
+  border-radius: map-get($estiloFormu, $borde-redondeado);
+}
+
+.btn {
+  background-color: $amariloAntonietta;
+}
+.card-text {
+  color: black;
+}

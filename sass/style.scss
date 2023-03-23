@@ -1,0 +1,100 @@
+@import "index";
+@import "galeria";
+@import "biografia";
+@import "eventos";
+@import "contacto";
+
+/*variables*/
+
+$amariloAntonietta: #ff9d10;
+
+/* estilos generales*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+body {
+  background-color: black;
+  color: bisque;
+  font-family: "Open Sans", sans-serif;
+}
+/*header con nesting*/
+header {
+  background-color: black;
+  position: sticky;
+  top: 0px;
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  .nav-link {
+    color: $amariloAntonietta;
+    font-size: 1.3rem;
+  }
+}
+ /*footer con nesting*/
+footer {
+  padding: 50px;
+  border-top: #403e3e;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  li {
+    list-style: none;
+  }
+  .bi {
+    color:$amariloAntonietta;
+    font-size: 2.3rem;
+  }
+}
+
+
+
+/*MEDIA QUERIES*/
+
+/*mobile*/
+@media only screen and (max-width: 576px) {
+  /*index*/
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  iframe {
+    width: 500px;
+    height: 280px;
+  }
+  .article_info-a {
+    flex-direction: column;
+    text-align: justify;
+  }
+  .article_info-b {
+    flex-direction: column-reverse;
+    text-align: justify;
+  }
+  /*biografia*/
+  .bio-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bio-info p {
+    padding: 20px;
+    text-align: justify;
+  }
+
+  /* galeria*/
+  .galeria-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
